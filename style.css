@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "PostBus", Arial, Helvetica, sans-serif;
+    src:url('font/ofont.ru_PostBus.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "PostBus", Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: limegreen;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: darkseagreen;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #eaeaea;
+}
