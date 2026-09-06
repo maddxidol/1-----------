@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>    
 <body>
-    <header>
-        <div>
+    <header class="header">
+        <div class="header__inner">
             <a href="#">Homeberries</a>
-            <nav>
-                <a href="#">Каталог</a>
-                <a href="#">О нас</a>
-                <a href="#">Контакты</a>
-            </nav>
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Поиск товаров...">
+                <button class="search__button">🔍</button>
+            </div>
+
+            <div class="user__actions">
+                <a href="#" class="u-a__link" title="Избранное">❤️</a>
+                <a href="#" class="u-a__link" title="Профиль">👤</a>
+                <a href="#" class="u-a__link" title="Заказы">📦</a>
+                <a href="#" class="u-a__link" title="Корзина">🛒</a>
+            </div>
         </div>
     </header>
     <main>
