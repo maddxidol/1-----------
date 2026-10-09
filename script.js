@@ -1,5 +1,6 @@
 const products = [
     {
+        id:1,
         name: 'Телефон vivo X300 Ultra Mac Nuggets Galaxy Pro V2562 16GB/512GB',
         price: 867,
         oldPrice: 1244,
@@ -12,6 +13,7 @@ const products = [
     },
 
     {
+        id:2,
         name: 'Прозрачный чехол для iPhone 17',
         price:9.63,
         oldPrice:null,
@@ -24,6 +26,7 @@ const products = [
     },
 
     {
+        id:3,
         name: 'Сумка шоппер из экокожи на плечо',
         price:49.25,
         oldPrice:105.81,
@@ -36,6 +39,7 @@ const products = [
     },
 
     {
+        id:3,
         name: 'Настольная игра для большой компании Пословицы и поговорки',
         price:9.85,
         oldPrice:11.80,
@@ -48,6 +52,7 @@ const products = [
     },
 
     {
+        id:4,
         name: 'Свитер оверсайз женский утепленный',
         price:66.80,
         oldPrice:143.47,
@@ -60,6 +65,7 @@ const products = [
     },
 
     {
+        id:5,
         name: 'Реплика AirPods 3 Pro',
         price:44.97,
         oldPrice:125.54,
@@ -72,6 +78,7 @@ const products = [
     },
 
     {
+        id:6,
         name: 'Солнцезащитный крем стик SPF 50',
         price:20.29,
         oldPrice:null,
@@ -84,6 +91,7 @@ const products = [
     },
 
     {
+        id:7,
         name: 'Спортивные носки NIKE 39-45',
         price:11.58,
         oldPrice:15.43,
@@ -96,6 +104,7 @@ const products = [
     },
 
     {
+        id:8,
         name: 'Футболка y2k комик молодежная',
         price:42.42,
         oldPrice:null,
@@ -108,6 +117,18 @@ const products = [
     }
 ];
 
+let cartCount = 0;
+
+function updateCartCount() {
+    const countElement = document.querySelector('.user-actions__count');
+    countElement.textContent = cartCount;
+
+    if (cartCount > 0) {
+        countElement.classList.add('user-actions__count--active');
+    } else {
+        countElement.classList.remove('user-actions__count--active');
+    }
+}
 
 function createCard(product) {
     const card = document.createElement('div');
@@ -137,9 +158,11 @@ function createCard(product) {
         <button class="catalog-card__favorite">
             <i class="far fa-heart"></i>
         </button>
-        ${discountHTML}
-        ${badgesHTML}
+        <div class="catalog-card__labels">
+            ${discountHTML}
+            ${badgesHTML}
         </div>
+    </div>
     <div class="catalog-card__info">
         <div class="catalog-card__prices">
             <span class="catalog-card__price">${product.price} BYN</span>
@@ -156,6 +179,22 @@ function createCard(product) {
         </button>
     </div>
     `;
+
+    const btn = card.querySelector('.catalog-card__btn');
+    btn.addEventListener('click', (event) => {
+        event.stopPropagation();
+        cartCount++;
+        updateCartCount();
+    });
+
+
+    card.addEventListener('click', (event) => {
+        if (event.target.closest('.catalog-card__btn') ||
+            event.target.closest('.catalog-card__favorite')) {
+                return;
+        } 
+        window.location.href = `productCard.html?id=${8};`
+    });
 
     return card;
 }
