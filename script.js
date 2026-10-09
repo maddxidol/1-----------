@@ -7,8 +7,8 @@ const products = [
         rating:4.8,
         reviewsCount:1,
         image:'images/telefon.png',
-        bages:['ХОРОШАЯ ЦЕНА'],
-        delivry:'Завтра'
+        badges:['ХОРОШАЯ ЦЕНА'],
+        delivery:'Завтра'
     },
 
     {
@@ -19,8 +19,8 @@ const products = [
         rating:4.9,
         reviewsCount:278,
         image:'images/chehol.jpg',
-        bages:['РАСПРОДАЖА'],
-        delivry:'2 дня'
+        badges:['РАСПРОДАЖА'],
+        delivery:'2 дня'
     },
 
     {
@@ -31,8 +31,8 @@ const products = [
         rating:4.9,
         reviewsCount:163,
         image:'images/sumka.jpg',
-        bages:[],
-        delivry:'Послезавтра'
+        badges:[],
+        delivery:'Послезавтра'
     },
 
     {
@@ -43,8 +43,8 @@ const products = [
         rating:4.9,
         reviewsCount:260,
         image:'images/nastolka.png',
-        bages:[],
-        delivry:'3 дня'
+        badges:[],
+        delivery:'3 дня'
     },
 
     {
@@ -55,8 +55,8 @@ const products = [
         rating:4.8,
         reviewsCount:157,
         image:'images/sviter.png',
-        bages:['РАСПРОДАЖА','ХИТЫ'],
-        delivry:'Послезавтра'
+        badges:['РАСПРОДАЖА','ХИТЫ'],
+        delivery:'Послезавтра'
     },
 
     {
@@ -67,8 +67,8 @@ const products = [
         rating:4.9,
         reviewsCount:2533,
         image:'images/airpods.png',
-        bages:[''],
-        delivry:'4 дня'
+        badges:['ХИТЫ','ХОРОШАЯ ЦЕНА'],
+        delivery:'4 дня'
     },
 
     {
@@ -79,8 +79,8 @@ const products = [
         rating:4.3,
         reviewsCount:1586,
         image:'images/spf.png',
-        bages:['ХОРОШАЯ ЦЕНА'],
-        delivry:'Завтра'
+        badges:['ХОРОШАЯ ЦЕНА'],
+        delivery:'Завтра'
     },
 
     {
@@ -91,8 +91,8 @@ const products = [
         rating:4.9,
         reviewsCount:14334,
         image:'images/noski.png',
-        bages:[],
-        delivry:'5 дней'
+        badges:[],
+        delivery:'5 дней'
     },
 
     {
@@ -103,7 +103,70 @@ const products = [
         rating:4.9,
         reviewsCount:4589,
         image:'images/futbolka.png',
-        bages:['ХИТЫ'],
-        delivry:'Завтра'
+        badges:['ХИТЫ'],
+        delivery:'Завтра'
     }
-]
+];
+
+
+function createCard(product) {
+    const card = document.createElement('div');
+    card.classList.add('catalog-card');
+    let discountHTML = '';
+    if (product.discount >0) {
+        discountHTML = `<span class="catalog-card__discount">-${product.discount}%</span>`;
+    }
+
+    let oldPriceHTML = '';
+    if (product.oldPrice) {
+    oldPriceHTML = `<span class="catalog-card__old-price">${product.oldPrice} BYN</span>`;
+    }
+    
+    let badgesHTML = '';
+    if (product.badges.length > 0) {
+    badgesHTML = '<div class="catalog-card__badges">';
+    product.badges.forEach(badge => {
+        badgesHTML += `<span class="catalog-card__badge">${badge}</span>`;
+    });
+    badgesHTML += '</div>';
+    }
+    
+    card.innerHTML = `
+    <div class="catalog-card__image">
+        <img src="${product.image}" alt="${product.name}">
+        <button class="catalog-card__favorite">
+            <i class="far fa-heart"></i>
+        </button>
+        ${discountHTML}
+        ${badgesHTML}
+        </div>
+    <div class="catalog-card__info">
+        <div class="catalog-card__prices">
+            <span class="catalog-card__price">${product.price} BYN</span>
+            ${oldPriceHTML}
+        </div>
+        <h3 class="catalog-card__title">${product.name}</h3>
+        <div class="catalog-card__rating">
+            <i class="fas fa-star"></i>
+            ${product.rating} · ${product.reviewsCount} отзывов
+        </div>
+        <button class="catalog-card__btn">
+            <i class="fas fa-shopping-cart"></i>
+            ${product.delivery}
+        </button>
+    </div>
+    `;
+
+    return card;
+}
+
+function renderProducts(products) {
+    const container = document.querySelector('.products');
+
+    products.forEach( product => {
+        const card = createCard(product);
+        container.appendChild(card);
+    });
+}
+
+renderProducts(products);
