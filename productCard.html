@@ -1,98 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Карточка товара</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>    
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <header class="header">
-        <div class="header__inner">
-            <a href="index.html" class="logo">OctoShop</a>
-            <div class="search">
-                <input type="text" class="search__input" placeholder="Поиск товаров...">
-                <button class="search__button">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-
-            <div class="user-actions">
-                <a href="#" class="user-actions__link" title="Избранное">
-                    <i class="fas fa-heart"></i>
-                </a>
-                <a href="#" class="user-actions__link" title="Профиль">
-                    <i class="fas fa-user"></i>
-                </a>
-                <a href="#" class="user-actions__link" title="Заказы">
-                    <i class="fas fa-box"></i>
-                </a>
-                <a href="#" class="user-actions__link" title="Корзина">
-                    <i class="fas fa-shopping-cart"></i>
-                </a>
-            </div>
+      <div class="header__inner">
+        <a href="index.html" class="logo">OctoShop</a>
+        <div class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Поиск товаров..."
+          />
+          <button class="search__button">
+            <i class="fas fa-search"></i>
+          </button>
         </div>
+
+        <div class="user-actions">
+          <a href="#" class="user-actions__link" title="Избранное">
+            <i class="fas fa-heart"></i>
+          </a>
+          <a href="#" class="user-actions__link" title="Профиль">
+            <i class="fas fa-user"></i>
+          </a>
+          <a href="#" class="user-actions__link" title="Заказы">
+            <i class="fas fa-box"></i>
+          </a>
+          <a href="#" class="user-actions__link" title="Корзина">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+      </div>
     </header>
     <main>
-        <div class="product-card">
-            <div class="product-card__image">
-                <img src="images/telefon.png" alt="Телефон vivo X300UltraMacNuggetsGalaxyPro V2562 16GB/512GB">
-            </div>        
-                <div class="product-card__info">
-                    <h2 class="product-card__title">Телефон vivo X300 Ultra Mac Nuggets Galaxy Pro V2562 16GB/512GB</h2>
-                    <ul class="product-card__description">
-                          <li>Поддержка eSIM:</li>
-                          <li>Да.</li>
-                          <li>Разрешение основного модуля камеры:</li>
-                          <li>200 Мп.</li>
-                          <li>Характеристики процессора:</li>
-                          <li>Qualcomm Snapdragon 8 Elite Gen5, 8 ядерный, 4.6 ГГц.</li>
-                          <li>Экран:</li>
-                          <li> 6.82" 1440x3168 пикселей, AMOLED, 144 Гц.</li>
-                          <li>Память:</li>
-                          <li>16 ГБ, 512 ГБ</li>   
-                    </ul>
-                    <p class="product-card__price">867 BYN</p>
-                    <div class="product-card__btns">
-                        <button class="product-card__btn1">В корзину</button>
-                        <button class="product-card__btn2">Купить</button>
-                    </div>
-                </div>
-            </div>
+      <div class="product-card">
+        <div class="product-card__image">
+          <img
+            src="images/telefon.png"
+            alt="Телефон vivo X300UltraMacNuggetsGalaxyPro V2562 16GB/512GB"
+          />
         </div>
- <section class="reviews">
+        <div class="product-card__info">
+          <h2 class="product-card__title">
+            Телефон vivo X300 Ultra Mac Nuggets Galaxy Pro V2562 16GB/512GB
+          </h2>
+          <ul class="product-card__description">
+            <li>Поддержка eSIM:</li>
+            <li>Да.</li>
+            <li>Разрешение основного модуля камеры:</li>
+            <li>200 Мп.</li>
+            <li>Характеристики процессора:</li>
+            <li>Qualcomm Snapdragon 8 Elite Gen5, 8 ядерный, 4.6 ГГц.</li>
+            <li>Экран:</li>
+            <li>6.82" 1440x3168 пикселей, AMOLED, 144 Гц.</li>
+            <li>Память:</li>
+            <li>16 ГБ, 512 ГБ</li>
+          </ul>
+          <p class="product-card__price">867 BYN</p>
+          <div class="product-card__btns">
+            <button class="product-card__btn1">В корзину</button>
+            <button class="product-card__btn2">Купить</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="reviews">
         <h2 class="reviews__title">Отзывы покупателей</h2>
         <div class="reviews__summary">
-            <div class="reviews__rating">
-                <span class="reviews__stars">★★★★★</span>
-                <span class="reviews__average">4.8</span>
-                <span class="reviews__count">· 1 отзыв</span>
-            </div>
+          <div class="reviews__rating">
+            <span class="reviews__stars">★★★★★</span>
+            <span class="reviews__average">4.8</span>
+            <span class="reviews__count">· 1 отзыв</span>
+          </div>
         </div>
         <div class="reviews__list">
-            <div class="review">
-                <div class="review__header">
-                    <div class="review__user">
-                        <span class="review__avatar">👤</span>
-                        <span class="review__name">Мухамед</span>
-                    </div>
-                    <div class="review__rating">★★★★★</div>
-                </div>
-                <p class="review__text">Отличный телефон! Камера просто бомба...</p>
-                <span class="review__date">15 января 2025</span>
+          <div class="review">
+            <div class="review__header">
+              <div class="review__user">
+                <span class="review__avatar">👤</span>
+                <span class="review__name">Мухамед</span>
+              </div>
+              <div class="review__rating">★★★★★</div>
             </div>
+            <p class="review__text">Отличный телефон! Камера просто бомба...</p>
+            <span class="review__date">15 января 2025</span>
+          </div>
         </div>
-    </section>
-        
+      </section>
     </main>
     <footer>
-        <p>&copy; 2026 Мой магазин</p>
-        <div>
-            <a href="#">Instagram</a>
-            <a href="#">Telegram</a>
-        </div>
+      <p>&copy; 2026 Мой магазин</p>
+      <div>
+        <a href="#">Instagram</a>
+        <a href="#">Telegram</a>
+      </div>
     </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
