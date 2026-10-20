@@ -20,7 +20,7 @@ const products = [
         discount:0,
         rating:4.9,
         reviewsCount:278,
-        image:'images/chehol.jpg',
+        image:'images/chehol.png',
         badges:['РАСПРОДАЖА'],
         delivery:'2 дня'
     },
@@ -33,13 +33,13 @@ const products = [
         discount:53,
         rating:4.9,
         reviewsCount:163,
-        image:'images/sumka.jpg',
+        image:'images/sumka.png',
         badges:[],
         delivery:'Послезавтра'
     },
 
     {
-        id:3,
+        id:4,
         name: 'Настольная игра для большой компании Пословицы и поговорки',
         price:9.85,
         oldPrice:11.80,
@@ -52,7 +52,7 @@ const products = [
     },
 
     {
-        id:4,
+        id:5,
         name: 'Свитер оверсайз женский утепленный',
         price:66.80,
         oldPrice:143.47,
@@ -65,7 +65,7 @@ const products = [
     },
 
     {
-        id:5,
+        id:6,
         name: 'Реплика AirPods 3 Pro',
         price:44.97,
         oldPrice:125.54,
@@ -78,7 +78,7 @@ const products = [
     },
 
     {
-        id:6,
+        id:7,
         name: 'Солнцезащитный крем стик SPF 50',
         price:20.29,
         oldPrice:null,
@@ -91,7 +91,7 @@ const products = [
     },
 
     {
-        id:7,
+        id:8,
         name: 'Спортивные носки NIKE 39-45',
         price:11.58,
         oldPrice:15.43,
@@ -104,7 +104,7 @@ const products = [
     },
 
     {
-        id:8,
+        id:9,
         name: 'Футболка y2k комик молодежная',
         price:42.42,
         oldPrice:null,
@@ -193,7 +193,7 @@ function createCard(product) {
             event.target.closest('.catalog-card__favorite')) {
                 return;
         } 
-        window.location.href = `productCard.html?id=${8};`
+        window.location.href = `productCard.html?id=${product.id}`;
     });
 
     return card;

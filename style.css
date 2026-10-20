@@ -610,7 +610,7 @@ footer {
     background: #ff3b30;
     color: #ffffff;
     padding: 3px 8px;
-    border-radius: 6px;
+    border-radius: 10px;
     font-size: 14px;
     font-weight: 700;
 }
@@ -619,7 +619,7 @@ footer {
     background: #a134bd;
     color: white;
     padding: 3px 8px;
-    border-radius: 6px;
+    border-radius: 10px;
     font-size: 12px;
     font-weight: 600;
 }
@@ -703,8 +703,8 @@ footer {
 
 .user-actions__count {
     position: absolute;
-    top: 19px;
-    right: 14px;
+    top: -6px;
+    right: -8px;
     background: #ff3b30;
     color: #ffffff;
     font-size: 11px;
