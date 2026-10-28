@@ -10,7 +10,23 @@ const products = [
         reviewsCount: 1,
         image: 'images/telefon.png',
         badges: ['ХОРОШАЯ ЦЕНА'],
-        delivery: 'Завтра'
+        delivery: 'Завтра',
+        description: 'Флагманский смартфон с мощной камерой.',
+        specs: [
+            'Поддержка eSIm: Да',
+            'Разрешение камеры: 200 Мп',
+            'Процессор: Snapdragon 8 Elite Gen5',
+            'Экран: 6.82" AMOLED, 144 Гц',
+            'Память: 16 ГБ/512 ГБ'
+        ],
+        reviews: [
+            { author: 'Мухамед',
+                text: 'Отличный телефон! Камера бомба.',
+                rating: 5, date: '19 сентября 2026' },
+            { author: 'Алексей',
+                text: 'Батарею держит два дня.',
+                rating: 4, date: '11 сентября 2026' }
+        ]
     },
     {
         id: 2,
@@ -22,7 +38,19 @@ const products = [
         reviewsCount: 278,
         image: 'images/chehol.png',
         badges: ['РАСПРОДАЖА'],
-        delivery: '2 дня'
+        delivery: '2 дня',
+        description: 'Тонкий прозрачный чехол, защищает от царапин.',
+        specs: [
+            'Материал: Силикон',
+            'Цвет: Прозрачный',
+            'Тип: Накладка'
+        ],
+        reviews: [
+            { author: 'Игорь',
+                text: 'Хороший чехол, но желтеет со временем.',
+                rating: 4,
+                date: '5 января 2025' }
+        ]
     },
     {
         id: 3,
@@ -34,7 +62,16 @@ const products = [
         reviewsCount: 163,
         image: 'images/sumka.png',
         badges: [],
-        delivery: 'Послезавтра'
+        delivery: 'Послезавтра',
+        description: '',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews: []
     },
     {
         id: 4,
@@ -46,7 +83,16 @@ const products = [
         reviewsCount: 260,
         image: 'images/nastolka.png',
         badges: [],
-        delivery: '3 дня'
+        delivery: '3 дня',
+        description: '',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews: []
     },
     {
         id: 5,
@@ -58,7 +104,16 @@ const products = [
         reviewsCount: 157,
         image: 'images/sviter.png',
         badges: ['РАСПРОДАЖА', 'ХИТЫ'],
-        delivery: 'Послезавтра'
+        delivery: 'Послезавтра',
+        description: '',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews: []
     },
     {
         id: 6,
@@ -70,7 +125,16 @@ const products = [
         reviewsCount: 2533,
         image: 'images/airpods.png',
         badges: ['ХИТЫ', 'ХОРОШАЯ ЦЕНА'],
-        delivery: '4 дня'
+        delivery: '4 дня',
+        description: '',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews: []
     },
     {
         id: 7,
@@ -82,7 +146,16 @@ const products = [
         reviewsCount: 1586,
         image: 'images/spf.png',
         badges: ['ХОРОШАЯ ЦЕНА'],
-        delivery: 'Завтра'
+        delivery: 'Завтра',
+        description: '',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews: []
     },
     {
         id: 8,
@@ -94,7 +167,16 @@ const products = [
         reviewsCount: 14334,
         image: 'images/noski.png',
         badges: [],
-        delivery: '5 дней'
+        delivery: '5 дней',
+        description: '',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews: []
     },
     {
         id: 9,
@@ -106,7 +188,16 @@ const products = [
         reviewsCount: 4589,
         image: 'images/futbolka.png',
         badges: ['ХИТЫ'],
-        delivery: 'Завтра'
+        delivery: 'Завтра',
+        description: '',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews: []
     }
 ];
 let cartCount = 0;
@@ -186,6 +277,8 @@ function createCard(product) {
 }
 function renderProducts(products) {
     const container = document.querySelector('.products');
+    if (!container)
+        return;
     products.forEach((product) => {
         const card = createCard(product);
         container.appendChild(card);

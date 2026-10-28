@@ -35,67 +35,15 @@
           <a href="#" class="user-actions__link" title="Заказы">
             <i class="fas fa-box"></i>
           </a>
-          <a href="#" class="user-actions__link" title="Корзина">
+          <a href="#" class="user-actions__link user-actions__link--cart" title="Корзина">
             <i class="fas fa-shopping-cart"></i>
+            <span class="user-actions__count">0</span>
           </a>
         </div>
       </div>
     </header>
     <main>
-      <div class="product-card">
-        <div class="product-card__image">
-          <img
-            src="images/telefon.png"
-            alt="Телефон vivo X300UltraMacNuggetsGalaxyPro V2562 16GB/512GB"
-          />
-        </div>
-        <div class="product-card__info">
-          <h2 class="product-card__title">
-            Телефон vivo X300 Ultra Mac Nuggets Galaxy Pro V2562 16GB/512GB
-          </h2>
-          <ul class="product-card__description">
-            <li>Поддержка eSIM:</li>
-            <li>Да.</li>
-            <li>Разрешение основного модуля камеры:</li>
-            <li>200 Мп.</li>
-            <li>Характеристики процессора:</li>
-            <li>Qualcomm Snapdragon 8 Elite Gen5, 8 ядерный, 4.6 ГГц.</li>
-            <li>Экран:</li>
-            <li>6.82" 1440x3168 пикселей, AMOLED, 144 Гц.</li>
-            <li>Память:</li>
-            <li>16 ГБ, 512 ГБ</li>
-          </ul>
-          <p class="product-card__price">867 BYN</p>
-          <div class="product-card__btns">
-            <button class="product-card__btn1">В корзину</button>
-            <button class="product-card__btn2">Купить</button>
-          </div>
-        </div>
-      </div>
-
-      <section class="reviews">
-        <h2 class="reviews__title">Отзывы покупателей</h2>
-        <div class="reviews__summary">
-          <div class="reviews__rating">
-            <span class="reviews__stars">★★★★★</span>
-            <span class="reviews__average">4.8</span>
-            <span class="reviews__count">· 1 отзыв</span>
-          </div>
-        </div>
-        <div class="reviews__list">
-          <div class="review">
-            <div class="review__header">
-              <div class="review__user">
-                <span class="review__avatar">👤</span>
-                <span class="review__name">Мухамед</span>
-              </div>
-              <div class="review__rating">★★★★★</div>
-            </div>
-            <p class="review__text">Отличный телефон! Камера просто бомба...</p>
-            <span class="review__date">15 января 2025</span>
-          </div>
-        </div>
-      </section>
+      <div id="product-details"></div>
     </main>
     <footer>
       <p>&copy; 2026 Мой магазин</p>
@@ -105,5 +53,6 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="product.js"></script>
   </body>
 </html>

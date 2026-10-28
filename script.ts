@@ -9,6 +9,9 @@ interface Product {
     image: string;
     badges: string[];
     delivery: string;
+    description: string;
+    specs:string[];
+    reviews: {author: string; text: string; rating: number; date: string}[];
 }
 
 const products: Product[] = [
@@ -22,7 +25,23 @@ const products: Product[] = [
         reviewsCount:1,
         image:'images/telefon.png',
         badges:['ХОРОШАЯ ЦЕНА'],
-        delivery:'Завтра'
+        delivery:'Завтра',
+        description: 'Флагманский смартфон с мощной камерой.',
+        specs: [
+            'Поддержка eSIm: Да',
+            'Разрешение камеры: 200 Мп',
+            'Процессор: Snapdragon 8 Elite Gen5',
+            'Экран: 6.82" AMOLED, 144 Гц',
+            'Память: 16 ГБ/512 ГБ'
+        ],
+        reviews:[
+            { author: 'Мухамед', 
+                text: 'Отличный телефон! Камера бомба.', 
+                rating: 5, date: '19 сентября 2026' },
+            { author: 'Алексей', 
+                text: 'Батарею держит два дня.', 
+                rating: 4, date: '11 сентября 2026' }
+        ]
     },
 
     {
@@ -35,7 +54,19 @@ const products: Product[] = [
         reviewsCount:278,
         image:'images/chehol.png',
         badges:['РАСПРОДАЖА'],
-        delivery:'2 дня'
+        delivery:'2 дня',
+        description: 'Тонкий прозрачный чехол, защищает от царапин.',
+        specs: [
+            'Материал: Силикон',
+            'Цвет: Прозрачный',
+            'Тип: Накладка'
+        ],
+        reviews:[
+            { author: 'Игорь', 
+                text: 'Хороший чехол, но желтеет со временем.', 
+                rating: 4, 
+                date: '5 января 2025' }
+        ]
     },
 
     {
@@ -48,7 +79,18 @@ const products: Product[] = [
         reviewsCount:163,
         image:'images/sumka.png',
         badges:[],
-        delivery:'Послезавтра'
+        delivery:'Послезавтра',
+        description: '',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews:[
+
+        ]
     },
 
     {
@@ -61,7 +103,18 @@ const products: Product[] = [
         reviewsCount:260,
         image:'images/nastolka.png',
         badges:[],
-        delivery:'3 дня'
+        delivery:'3 дня',
+        description: '',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews:[
+
+        ]
     },
 
     {
@@ -74,7 +127,18 @@ const products: Product[] = [
         reviewsCount:157,
         image:'images/sviter.png',
         badges:['РАСПРОДАЖА','ХИТЫ'],
-        delivery:'Послезавтра'
+        delivery:'Послезавтра',
+        description: '',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews:[
+
+        ]    
     },
 
     {
@@ -87,7 +151,18 @@ const products: Product[] = [
         reviewsCount:2533,
         image:'images/airpods.png',
         badges:['ХИТЫ','ХОРОШАЯ ЦЕНА'],
-        delivery:'4 дня'
+        delivery:'4 дня',
+        description: '',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews:[
+
+        ]
     },
 
     {
@@ -100,7 +175,18 @@ const products: Product[] = [
         reviewsCount:1586,
         image:'images/spf.png',
         badges:['ХОРОШАЯ ЦЕНА'],
-        delivery:'Завтра'
+        delivery:'Завтра',
+        description: '',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews:[
+
+        ]    
     },
 
     {
@@ -113,7 +199,18 @@ const products: Product[] = [
         reviewsCount:14334,
         image:'images/noski.png',
         badges:[],
-        delivery:'5 дней'
+        delivery:'5 дней',
+        description: '',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews:[
+
+        ]    
     },
 
     {
@@ -126,7 +223,18 @@ const products: Product[] = [
         reviewsCount:4589,
         image:'images/futbolka.png',
         badges:['ХИТЫ'],
-        delivery:'Завтра'
+        delivery:'Завтра',
+        description:'',
+        specs: [
+            ' ',
+            ' ',
+            ' ',
+            ' ',
+            ' '
+        ],
+        reviews:[
+
+        ]
     }
 ];
 
